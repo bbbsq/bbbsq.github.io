@@ -108,6 +108,7 @@ function qd() {
             } else if (zt != "min" && zt != "max") {
                 document.getElementById('ww').innerHTML = '孵化中';
             }
+            document.getElementById("qd").style.animationName = 'no';
         } else {
             alert("还没有下蛋哦！")
         }
@@ -208,8 +209,6 @@ function register() {
         let params = {
             username: document.getElementById("mz").value,
             password: document.getElementById("mm").value,
-            // phone: document.getElementById("sjh").value,
-            // qqh: document.getElementById("qqh").value,
             egg: 0,
             lxts: 0,
             sj: cur(),

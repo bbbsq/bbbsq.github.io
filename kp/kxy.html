@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="CH-zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>矿学院</title>
+</head>
+<style>
+    body {
+        background-image: url(images/bj.jpg);
+        background-size: 100%;
+        margin:0px;
+    }
+    a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        box-shadow: 0px 3px 5px 1px rgba(0, 0, 0,.2);
+    }
+    .top {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 60px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 25px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    h2 {
+        text-align: center;
+        color: #fff;
+        text-shadow: 0px 3px 5px rgba(0, 0, 0,.2);
+    }
+    .a h3 {
+        text-align: center;
+        color: #fff;
+        text-shadow: 0px 3px 5px rgba(0, 0, 0,.2);
+    }
+    .a ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    .a ul li {
+        list-style: none;
+        font-size: 12px;
+        width: 150px;
+        height: 30px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 3px 5px 1px rgba(0, 0, 0,.2);
+        overflow: hidden;
+        transition: all 1s;
+    }
+    .a ul li:hover {
+        width: calc(100vw - 40px);
+        height: calc(100vw / 1.85);
+        background-color: rgba(255, 255, 255,0);
+        box-shadow: 0px 3px 5px 1px rgba(0, 0, 0,0);
+    }
+    .a ul li video {
+       width: 0px;
+       transition: all 1s;
+    }
+    .a ul li:hover video {
+        width: calc(100vw - 40px);
+    }
+    .a ul li:hover span {
+        display: none;
+    }
+    .a ul li:nth-child(odd) {
+        float: left;
+        margin-left:20px;
+    }
+    .a ul li:nth-child(even) {
+        float: right;
+        margin-right:20px;
+    }
+    .a ul li:nth-child(even):hover {
+        margin-left: -150px;
+    }
+</style>
+<script>
+        window.onload=function(){
+    var videos = document.getElementsByTagName('video');//获取所有video
+    //循环给所有video添加监听事件 当前的video开始播时  调用pauseAll 将当前播放的video的索引传值过去
+    for (var i = videos.length - 1; i >= 0; i--) {
+        (function(n){
+            videos[n].addEventListener('play',function(){
+                pauseAll(n);
+            })
+        })(i)
+    }
+    //接收调用传来的索引 循环所有video 索引与传来的索引不相同的 暂停 重载
+    function pauseAll(index){
+        for (var j = videos.length - 1; j >= 0; j--) {
+            if (j!=index){
+                videos[j].pause();
+                videos[j].load();
+            }
+        }
+    };
+}
+</script>
+<body>
+    <a href="bx.html" class="top">
+        变现过程
+    </a>
+     <h2>矿学院</h2>
+     <div class="a">
+         <h3>鼻祖比特币，被不断效仿，超越，创新！</h3>
+         <ul>
+             <li>
+                 <span>区块链是什么？</span>
+                <video id="video" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/区块链是什么？.mp4"></source>
+                </video>
+             </li>
+             <li><span>去中心化</span>
+                <video id="video" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/去中心化.mp4"></source>
+                </video>
+             </li>
+             <li><span>区块链的运行原理</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/区块链的运行原理.mp4"></source>
+                </video>
+             </li>
+             <li><span>挖矿是什么意思？</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/挖矿是什么意思？.mp4"></source>
+                </video>
+             </li>
+             <li><span>比特币的挖矿原理</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/比特币的挖矿原理.mp4"></source>
+                </video>
+             </li>
+             <li><span>分布式记账</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/分布式记账.mp4"></source>
+                </video>
+             </li>
+             <li><span>共识机制</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/共识机制.mp4"></source>
+                </video>
+             </li>
+             <li><span>POW共识机制</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/POW共识机制.mp4"></source>
+                </video>
+             </li>
+             <li><span>POS共识机制</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/POS共识机制.mp4"></source>
+                </video>
+             </li>
+             <li><span>什么是智能合约？</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/什么是智能合约？.mp4"></source>
+                </video>
+             </li>
+             <li><span>货币的演变</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/货币的演变.mp4"></source>
+                </video>
+             </li>
+             <li><span>什么是数字货币？</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/什么是数字货币？.mp4"></source>
+                </video>
+             </li>
+             <li><span>什么是比特币？</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/什么是比特币？.mp4"></source>
+                </video>
+             </li>
+             <li><span>什么是数字货币减半？</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/什么是数字货币减半？.mp4">
+                </video>
+             </li>
+             <li><span>数字货币带来了什么影响？</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/数字货币带来了什么影响？.mp4">
+                </video>
+             </li>
+             <li><span>什么是Defi？</span>
+                <video id="video" onmouseover="play()" onmouseout="pause()" preload="none" controls="controls">
+                    <source type="audio/mp4" src="images/什么是Defi？.mp4"></source>
+                </video>
+             </li>
+         </ul>
+     </div>
+</body>
+</html>
