@@ -1,0 +1,189 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(../images/bwtjbj.jpg);
+    background-size: 200vw 100vh;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+li {
+    list-style: none;
+}
+.xx {
+    position: relative;
+    width: 90%;
+    color:#FFF;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.xx .a {
+    position: absolute;
+    left: 10px;
+}
+.xx .b {
+    position: absolute;
+    right: 10px;
+}
+.xx .tz {
+    position: absolute;
+    top:35px;
+    width: 100%;
+    text-align: center;
+}
+.xx p {
+    position: absolute;
+    top: 50px;
+}
+.xx span {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+.xx  div[class*=tx] {
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 100%;
+}
+.xx .tx-a {
+    background-image: url(../images/a.jpg);
+}
+.xx .tx-b {
+    background-image: url(../images/b.jpg);
+}
+.xx .tx-c {
+    background-image: url(../images/c.jpg);
+}
+.main .xm {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 100px;
+    text-align: center;
+    color: #FFF;
+    margin: 0px auto;
+    border-radius: 20px;
+    margin-top: 60px;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main .xm .tx {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main .xm .tx img {
+    width: 100%;
+}
+
+.main .xm div[class*=ys] {
+    width: 75px;
+    height: 130px;
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    background-size: 100% 100%;
+}
+.main .xm .ys-ep {
+    background-image: url(images/ep.jpg);
+}
+.main .xm .ys-swyz {
+    background-image: url(images/swyz.jpg);
+}
+.main .xm .ys-cmb {
+    background-image: url(images/cmb-1.jpg);
+}
+.main .xm .ys-llgj {
+    background-image: url(../images/ty.jpg);
+}
+.main .xm .ys-mgxq {
+    background-image: url(images/mgxq.jpg);
+}
+.main .xm .ys-zsdl {
+    background-image: url(images/zsdl.jpg);
+}
+.main .xm .ys-mym {
+    background-image: url(images/mym.jpg);
+}
+.main .xm .ys-jmkj {
+    background-image: url(images/jmkj.jpg);
+}
+.main .xm .ys-enft {
+    background-image: url(images/enft.jpg);
+}
+.main .xm .ys-cto {
+    background-image: url(images/cto.jpg);
+}
+.main .xm .ys-star {
+    background-image: url(images/star.jpg);
+}
+.main .xm .js {
+    margin-top: 10px;
+    margin-left: 80px;
+    font-size: 10px;
+}
+
+.main .xm .sj {
+    font-size: 10px;
+    position: absolute;
+    bottom: 3px;
+    right: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+    color: #fff;
+}
+
+.main .xm div[class*=ys] .ts {
+    position: absolute;
+    top: -18px;
+    color:#fff;
+    font-size: 13px;
+    text-shadow: 0px 1px 5px  rgba(0, 0, 0, 1);
+}
+.main .xm div[class*=ys] .ts span {
+    color: rgb(21, 253, 0);
+    text-shadow: 0px 1px 5px  rgba(0, 0, 0, 1);
+}
+.main .xm div[class*=ys] ul {
+    position: absolute;
+    width: 105px;
+    top: 2px;
+    right: -110px;
+}
+
+.main .xm div[class*=ys] ul li {
+    float: left;
+    width: 20px;
+    height: 27px;
+    background-image: url(../images/rd.png);
+    background-size: 100%;
+}
+.main .xm .ys-llgj ul li {
+    background-image: url(../images/rd2.png)!important;
+}

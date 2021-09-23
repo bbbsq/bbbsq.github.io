@@ -1,0 +1,1265 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(images/bwtjbj.jpg);
+    background-size: 150% calc(100vh - 200px);
+    background-position: -150px 200px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    color: #fff;
+    text-align: center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 200px;
+    background-image: url(images/xxmbj.jpg);
+    background-repeat: no-repeat;
+}
+
+.header .box {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -65px;
+}
+
+.header div[class*=xm] {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+    text-align: center;
+    background-size: 100%;
+}
+
+.header div[class*=xm] a {
+    color: #FFF;
+}
+
+.header .box .xm-a {
+    background-image: url(images/bglogo.jpg);
+    background-repeat: no-repeat;
+}
+
+.header .box .xm-b {
+    background-image: url(images/starlogo.jpg);
+    background-repeat: no-repeat;
+}
+
+.header h2 {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgb(56, 119, 255);
+}
+
+.header h3 a {
+    color: #fff;
+}
+
+.community {
+    width: 90%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    top: 170px;
+    left: 50%;
+    margin-left: -45%;
+}
+
+.portrait {
+    position: relative;
+    width: 100%;
+    height: 55px;
+}
+
+.port {
+    position: absolute;
+    top: -18px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 30px;
+    background-image: url(images/tx.jpg);
+    background-size: 65px;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.3);
+    animation-name: a;
+    animation-duration: 2s;
+}
+
+@keyframes a {
+    0% {
+        top: -250px;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: -18px;
+    }
+}
+
+.port-min {
+    position: absolute;
+    left: 100px;
+}
+
+a[class*="tx"] {
+    display: block;
+    position: relative;
+    float: left;
+    margin-left: 250px;
+    margin-top: 2px;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    animation-name: aa;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aa {
+    0% {
+        margin-left: 250px;
+    }
+    50% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 15px;
+        width: 45px;
+        height: 45px;
+        box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.port-tx-a {
+    background-image: url(images/a.jpg);
+    background-size: 45px;
+}
+
+a[class*="tx"] .new {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 2px;
+    left: 35px;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.port-tx-b {
+    background-image: url(images/b.jpg);
+    background-size: 45px;
+}
+
+.port-tx-c {
+    background-image: url(images/c.jpg);
+    background-size: 45px;
+}
+
+.news {
+    padding-top: 55px;
+    width: 100%;
+    height: 95px;
+}
+
+.new1 {
+    width: 100%;
+    height: 30px;
+}
+
+.community .news .new1 b {
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.community .news .new1 a {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 10px;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    background-color: rgb(230, 230, 230);
+}
+
+.community .news .new1 .fxh {
+    width: 45px;
+}
+
+.community .news .new1 .jsq {
+    width: 45px;
+}
+
+.community .news .new2 .num {
+    display: inline-block;
+    float: left;
+    font-size: 10px;
+    margin-left: 10px;
+    color: rgb(255, 60, 0);
+}
+
+.community .news .new2 .xms {
+    text-align: center;
+    color: rgb(0, 189, 9);
+}
+
+.community .news .new2 .start {
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    font-size: 10px;
+    color: rgb(255, 60, 0);
+}
+
+.community .news .new2 .xms .tyl {
+    display: block;
+    width: 80px;
+    margin: 0px auto;
+}
+
+.community .news .new2 .start b {
+    margin-left: 30px;
+}
+
+.community .news .new1 .join:focus .erweima {
+    left: 50%;
+    transition: all 1s;
+}
+
+.community .news .new1 .join:focus .sys {
+    color: honeydew;
+    left: 50%;
+    transition: all 1s;
+    transition-delay: .5s;
+    z-index: 1;
+}
+
+.community .news .new1 .join:focus .rs {
+    height: 905px;
+    width: 340px;
+    left: 50%;
+    margin-left: -170px;
+    transition: all 1s;
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+.rs {
+    position: absolute;
+    top: 250px;
+    left: -130%;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
+    background-image: url(images/rs.jpg);
+    background-size: 100%;
+}
+
+.erweima {
+    position: absolute;
+    top: 0px;
+    left: -50%;
+    margin-left: -100px;
+    z-index: 4;
+    box-shadow: 0px 10px 20px 20px rgba(255, 81, 0, 0.1);
+}
+
+.join .sys {
+    position: absolute;
+    top: 210px;
+    left: -50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(255, 115, 0);
+}
+
+div[class*="xf"] {
+    width: 100px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px;
+    margin-left: -50px;
+    left: 50%;
+}
+
+.xf1 {
+    height: 89px;
+    top: 253px;
+    background-image: url(images/xf1.png);
+    z-index: 0;
+}
+
+.xf2 {
+    width: 30%;
+    height: 50px;
+    top: 290px;
+    background-image: url(images/xf2.png);
+    z-index: 0;
+}
+
+.box .xf2 .new {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -7.5px;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: red;
+    animation-name: pp;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+}
+
+@keyframes pp {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.3, 1.3);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.xf2 span {
+    text-align: center;
+    width: 100px;
+    position: absolute;
+    top: -20px;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.notice {
+    position: absolute;
+    height: 50px;
+    width: 80%;
+    top: 34px;
+    left: 50%;
+    margin-left: -40%;
+    border-radius: 10px;
+    color: black;
+    background-color: #ffffff;
+    z-index: 2;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box:focus .notice {
+    height: 165px;
+    width: 300px;
+    top: -250px;
+    margin-left: -150px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 60, 0);
+    box-shadow: 0px 0px 10px 1px #fff;
+    font-size: 25px;
+    transition: all 1s;
+}
+
+.box:focus .notice p {
+    color: rgba(255, 60, 0, 1);
+    transition: all 1s;
+    transition-delay: 0.9s;
+}
+
+.box:focus .notice div {
+    color: rgba(255, 60, 0, 1);
+    transition: all 1s;
+}
+
+.box:focus .text {
+    height: 100%;
+}
+
+.notice .text {
+    height: 48px;
+    overflow: hidden;
+}
+
+.notice .text h6 {
+    margin-top: 3px;
+    text-align: center;
+}
+
+.notice .text p {
+    font-size: 14px;
+    color: rgba(255, 60, 0, 0);
+}
+
+.notice .text div {
+    position: absolute;
+    font-size: 12px;
+    color: rgba(255, 60, 0, 0);
+    right: 3px;
+    bottom: 3px;
+}
+
+
+/* 介绍栏 */
+
+div[class*="js"] {
+    position: absolute;
+    width: calc(70vw);
+    height: 150px;
+    top: -173px;
+    border-radius: 20px;
+    background-image: url(images/wallhaven-9m2po8.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
+    transition: all 1s;
+}
+
+.js-1 {
+    left: calc(-135vw);
+}
+
+.js-2 {
+    left: calc(-135vw - 65px);
+}
+
+.js-3 {
+    left: calc(-135vw - 65px * 2);
+}
+
+.js-4 {
+    left: calc(-135vw - 65px * 3);
+}
+
+.js-5 {
+    left: calc(-135vw - 65px * 4);
+}
+
+.xm ul .a:hover .js-1 {
+    width: calc(90vw);
+    left: 155px;
+    margin-left: -45vw;
+    background-image: url(images/wallhaven-2eo17x.jpg);
+}
+
+.xm ul .b:hover .js-2 {
+    width: calc(90vw);
+    left: 90px;
+    margin-left: -45vw;
+    background-image: url(images/wallhaven-8xyqjy.png);
+}
+
+.xm ul .c:hover .js-3 {
+    width: calc(90vw);
+    left: 25px;
+    margin-left: -45vw;
+    top: -173px;
+    background-image: url(images/wallhaven-96xr8k.jpg);
+}
+
+.xm ul .d:hover .js-4 {
+    width: calc(90vw);
+    left: -40px;
+    margin-left: -45vw;
+    top: -173px;
+    background-image: url(images/wallhaven-9m2po8.jpg);
+    background-size: 115%;
+}
+
+.xm ul .e:hover .js-5 {
+    width: calc(90vw);
+    left: -105px;
+    margin-left: -45vw;
+    top: -173px;
+    background-image: url(images/wallhaven-e78pvw.jpg);
+}
+
+.xm {
+    position: relative;
+    left: 50%;
+    margin-left: -120px;
+    top: 190px;
+    width: 240px;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+.xm h3 {
+    line-height: 0px;
+    text-align: center;
+    font-size: 0px;
+}
+
+.xm:hover h3 {
+    font-size: 20px;
+    transition: all 1s;
+}
+
+.xm:hover {
+    position: relative;
+    left: 50%;
+    margin-left: -47%;
+    top: 350px;
+    width: 94%;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.xm:hover .mm {
+    width: 310px;
+}
+
+.xm:hover .xm2 {
+    background-color: crimson;
+}
+
+.xm:hover ul li div[class*="xm"] {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+
+.xm:hover ul li span {
+    font-size: 13px;
+    transition: all 1s;
+    transition-delay: 1.5s;
+}
+
+.xm .mm {
+    padding-top: 10px;
+    height: 40px;
+    width: 220px;
+    margin: 0px auto;
+}
+
+.xm .mm:hover {
+    width: 310px;
+}
+
+.xm ul li {
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.xm:hover ul li {
+    width: 50px;
+    height: 70px;
+    margin-left: 15px;
+    transition: all 1s;
+    transition-delay: .5s;
+}
+
+.xm ul li:nth-child(1) {
+    margin-left: 0px;
+}
+
+.xm ul li div[class*="xm"] {
+    float: left;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: 100%;
+}
+
+.xm ul .a .xm-1 {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    background-image: url(images/zbc.png);
+}
+
+.xm ul .b .xm-2 {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    background-image: url(images/bee.png);
+}
+
+.xm ul .c .xm-3 {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    background-image: url(images/bhdex.png);
+}
+
+.xm ul .d .xm-4 {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    background-image: url(images/vgc.png);
+}
+
+.xm ul .e .xm-5 {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    background-image: url(images/bi.png);
+}
+
+.xm ul li div[class*="xm"] .new {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    left: 30px;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: red;
+    animation-name: pp;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 5;
+}
+
+.xm ul li span {
+    font-size: 0px;
+}
+
+
+/* 详细页面 */
+
+div[class*="js"] div[class*="tb"] {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background-size: 100%;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+div[class*="js-1"] .tb-1 {
+    background-image: url(images/zbc.png);
+}
+
+div[class*="js-2"] .tb-2 {
+    background-image: url(images/bee.png);
+}
+
+div[class*="js-3"] .tb-3 {
+    background-image: url(images/bhdex.png);
+}
+
+div[class*="js-4"] .tb-4 {
+    background-image: url(images/vgc.png);
+}
+
+div[class*="js-5"] .tb-5 {
+    background-image: url(images/bi.png);
+}
+
+div[class*="js"] div[class*="app"] {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 30px;
+    left: 55px;
+    border-radius: 50%;
+}
+
+div[class*="js"] div[class*="tb"] .new {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: -15px;
+    left: 55px;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: red;
+}
+
+div[class*="js-1"] .app-1 {
+    background-color: springgreen;
+}
+
+div[class*="js-2"] .app-2 {
+    background-color: springgreen;
+}
+
+div[class*="js-3"] .app-3 {
+    background-color: springgreen;
+}
+
+div[class*="js-4"] .app-4 {
+    background-color: springgreen;
+}
+
+div[class*="js-5"] .app-5 {
+    background-color: springgreen;
+}
+
+div[class*="js"] div[class*="app"]:hover .ts {
+    display: block;
+    margin-top: -70px;
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+div[class*="js"] div[class*="app"] .ts {
+    display: none;
+    margin-top: -70px;
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+div[class*="js"] div[class*="app"] .ts span {
+    font-size: 10px;
+}
+
+div[class*="js"] div[class*="app"] .ts b {
+    font-size: 10px;
+}
+
+div[class*="js"] .sj {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    color: #FFF;
+    font-size: 15px;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+}
+
+div[class*="js"] .sj .ts {
+    font-size: 15px;
+    color: rgb(72, 255, 0);
+    text-shadow: 0px 1px 5px rgb(0, 0, 0);
+}
+
+div[class*="js"] .t1 {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    margin-left: -140px;
+}
+
+div[class*="js"] .zx {
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 30px;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+}
+
+div[class*="js"] .t1 ul li {
+    margin-left: 0px;
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+div[class*="js"] .t1 ul li a {
+    line-height: 40px;
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+}
+
+div[class*="js"] .t1 ul li span {
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+}
+
+div[class*="js"] .t1 ul li .x {
+    line-height: 30px;
+    font-size: 10px;
+    color: rgb(72, 255, 0);
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+}
+
+div[class*="js"] .t1 ul .a {
+    margin-right: 50px;
+}
+
+div[class*="js"] .t1 ul .b {
+    margin-right: 50px;
+}
+
+.yqtj a {
+    position: absolute;
+    top: 421px;
+    left: 50%;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: -100px;
+    background-color: #b4ffd6;
+    border-radius: 10px;
+    border: solid 1px #00ac98;
+    color: #00ac98;
+}
+
+.kxy {
+    display: block;
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #b4ffd6;
+    border-radius: 10px;
+    border: solid 1px #00ac98;
+    top: 420px;
+    left: 50%;
+    margin-left: 50px;
+}
+
+
+/* 最新项目 */
+
+.wrap {
+    margin: 60px auto;
+    width: 330px;
+    height: 100px;
+    position: relative;
+}
+
+.xm1 {
+    width: 330px;
+    height: 210px;
+    margin: 0px auto;
+    margin-top: 250px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(images/j1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.xm1 img {
+    width: 100%;
+}
+
+.xm1 .x1 {
+    color: #00ac98;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 27px;
+}
+
+.xm1 .x1 ul li div {
+    color: #ffbf00;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.xm1 .x1 .z {
+    float: left;
+    font-size: 15px;
+    width: 70px;
+    height: 22px;
+    animation-duration: 0.3s;
+    /* animation-name: dd; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes dd {
+    0% {
+        transform: rotateZ(-2deg);
+    }
+    50% {
+        transform: rotateZ(2deg);
+    }
+    100% {
+        transform: rotateZ(-2deg);
+    }
+}
+
+.xm1 .x1 ul li:hover .a {
+    top: -153px;
+}
+
+.xm1 .x1 .a {
+    position: absolute;
+    top: -328px;
+    left: 86px;
+    font-size: 12px;
+    line-height: 15px;
+    transition: top 0.5s;
+    z-index: 2;
+}
+
+.xm1 .x1 ul li {
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 1px;
+    border: solid 2px #00ac98;
+    float: left;
+    margin-left: 6.5px;
+    background-color: #b4ffd6;
+}
+
+.gg {
+    width: 160px;
+    height: 145px;
+    background-image: url(images/jdbj.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: top 0.5s;
+}
+
+.xm1 .zc {
+    position: relative;
+    width: 160px;
+    height: 145px;
+    margin: 30px auto;
+    color: #ffbf00;
+}
+
+.xm1 .zc div {
+    position: absolute;
+    top: -10px;
+    text-align: center;
+    width: 100%;
+}
+
+.xm1 .zc div input {
+    width: 100px;
+    color: #ffbf00;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.xm1 .zc div button {
+    width: 50px;
+    margin-top: 3px;
+    color: #ffbf00;
+    border-radius: 10px;
+    border: solid 1px #ffbf00;
+    background-color: rgba(255, 145, 0, 0);
+}
+
+.xm1 .j {
+    width: 108px;
+    height: 182px;
+    position: relative;
+    display: none;
+    margin: 0px auto;
+    background-image: url(images/xdd.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.xm1 .j .d,
+.d1,
+.d2 {
+    width: 15px;
+    height: 22px;
+    position: absolute;
+    display: none;
+    left: 50%;
+    bottom: 8px;
+    background-image: url(images/d.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.xm1 .j .d1 {
+    transform: rotateZ(-65deg);
+    margin-left: -18.5px;
+    animation-duration: 2s;
+    /* animation-name: d; */
+    animation-fill-mode: forwards;
+}
+
+.xm1 .j .d2 {
+    transform: rotateZ(-55deg);
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.xm1 .j .d {
+    left: 195%;
+    margin-left: -18.5px;
+    bottom: 155px;
+    display: block;
+    transform: rotateZ(0);
+}
+
+@keyframes d1 {
+    0% {
+        bottom: 8px;
+        left: 50%;
+        /* width: 30px;
+        height: 44px; */
+    }
+    30% {
+        width: 30px;
+        height: 44px;
+        bottom: 55px;
+        left: 50%;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        bottom: 155px;
+        left: 195%;
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes d2 {
+    0% {
+        bottom: 8px;
+        left: 50%;
+        /* width: 30px;
+        height: 44px; */
+    }
+    30% {
+        width: 30px;
+        height: 44px;
+        bottom: 55px;
+        left: 50%;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        bottom: 155px;
+        left: 195%;
+        margin-left: -18.5px;
+        transform: rotateZ(0deg);
+    }
+}
+
+.xm1 .j .ds {
+    position: absolute;
+    top: 25px;
+    left: 168.5%;
+    color: rgb(255, 196, 0);
+    font-size: 12px;
+    text-align: center;
+    width: 35px;
+    height: 12px;
+}
+
+.xm1 .j .ddr {
+    position: absolute;
+    top: 38px;
+    left: 174%;
+    color: rgb(255, 230, 0);
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    width: 23px;
+    height: 33px;
+    background-image: url(images/ddr.png);
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+.xm1 .j .ddr span {
+    color: #fff;
+    line-height: 30px;
+}
+
+.xm1 .j .w {
+    width: 108px;
+    height: 25px;
+    position: absolute;
+    bottom: -2.4px;
+    background-image: url(images/jw.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.xm1 .yw {
+    width: 100%;
+    height: 183px;
+    display: none;
+    position: absolute;
+    background-image: url(images/yw.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #FFF;
+    text-shadow: 0px 1px 2px rgb(0, 0, 0);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+    transition: .8s;
+}
+
+.front {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.back {
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.wrap:hover .front {
+    transform: perspective(800px) rotateX(-180deg);
+}
+
+.wrap:hover .back {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.wrap .front,
+.back .t {
+    text-align: center;
+    font-size: 12px;
+}
+
+.wrap .front div[class*="tt"] {
+    position: absolute;
+    bottom: 0px;
+    height: 130%;
+    width: 80px;
+    border-radius: 10px;
+    background-size: 100%;
+    box-shadow: 2px -1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.wrap .front div[class*="tt"] .sj {
+    position: absolute;
+    font-size: 12px;
+    text-shadow: 0px 1px 3px rgb(0, 0, 0);
+    top: -16px;
+}
+
+.wrap .front div[class*="tt"] .sj span {
+    color: greenyellow;
+}
+
+.wrap .front .tt-bg {
+    background-image: url(jc/images/bg.jpg);
+}
+
+.wrap .front .tt-gmn {
+    background-image: url(jc/images/gmn.jpg);
+}
+
+.wrap .front .tt-yb {
+    background-image: url(jc/images/yb.jpg);
+}
+
+.wrap .front div[class*="tt"] ul {
+    position: absolute;
+    width: 105px;
+    top: 2px;
+    right: -110px;
+}
+
+.wrap .front div[class*="tt"] ul li {
+    float: left;
+    width: 20px;
+    height: 27px;
+    background-image: url(images/rd.png);
+    background-size: 100%;
+}
+
+.wrap .front .text {
+    position: absolute;
+    left: 85px;
+    font-size: 12px;
+}
+
+.wrap .front .text h3 {
+    text-align: center;
+}
+
+.wrap .front .rq {
+    position: absolute;
+    font-size: 12px;
+    bottom: 3px;
+    right: 3px;
+}
+
+.back {
+    background-image: url(images/zxxmbj.jpg);
+    background-size: 100%;
+}
+
+.back h3 {
+    text-align: center;
+}
+
+.back ul {
+    width: 280px;
+    margin: 0px auto;
+}
+
+.back ul li {
+    float: left;
+    text-align: center;
+    width: 60px;
+    margin-left: 50px;
+}
+
+.back ul li a {
+    color: #fff;
+}
+
+.back ul li span {
+    font-size: 12px;
+    color: chartreuse;
+}
