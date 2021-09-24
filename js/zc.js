@@ -108,7 +108,6 @@ function qd() {
             } else if (zt != "min" && zt != "max") {
                 document.getElementById('ww').innerHTML = '孵化中';
             }
-             document.getElementById("qd").style.animationName = 'no';
         } else {
             alert("还没有下蛋哦！")
         }
