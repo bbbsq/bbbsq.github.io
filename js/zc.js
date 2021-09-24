@@ -6,18 +6,24 @@ let user = Bmob.User.current() //获取缓存
 var obj = user.objectId,
     mz = user.username,
     egg = user.egg,
+    egg2 = user.egg2,
     sjh = user.phone,
     sj1 = user.sj,
     lxts = user.lxts,
     csj = user.createdAt.substr(0, 10),
-    zt = user.zt;
+    zt = user.zt,
+    qqh = user.qqh;
 var ts = DateDiff(csj, cur()),
     ts2 = DateDiff(sj1, cur());
 
 var time = new Date().getHours(); //获取时间
-var i = 0,
-    d = 0;
-
+var i = 0, //点击签到次数
+    d = 0, //可领蛋个数
+    jdjg = 0, //鸡蛋价格
+    cdjg = 0, //彩蛋价格
+    lx = '', //判断蛋的类型
+    jg = 0, //赋值价格
+    sl = 0; //赋值彩数量
 function xx() {
     if (ts2 > 1) { //判断连续签到
         query.get(obj).then(res => {
@@ -47,7 +53,7 @@ function xx() {
     }
 
     if (lxts <= 10 && zt == 'max') { //判断连续<10天数后
-        if (ts % 2 == 1) {
+        if (ts % 2 == 0) {
             d = 1;
         }
     } else if (lxts >= 10 && lxts <= 29 && zt == 'max') { //判断连续10到30的天数
@@ -69,7 +75,7 @@ function qd() {
                     document.getElementById('ddr').innerHTML = lxts + 1;
                     i++;
                 }).catch(err => {
-                    alert('网络错误,刷新请重试！')
+                    alert('网络错误,请刷新重试！')
                 });
             }
             if (d == 1) {
@@ -101,12 +107,14 @@ function qd() {
                 res.save()
             });
             Bmob.User.updateStorage(obj) //更新数据
-            if (zt == "max") {
+            if (zt == "max" && d != 0) {
                 document.getElementById('ww').innerHTML = '已收取';
             } else if (zt == "min") {
                 document.getElementById('ww').innerHTML = '成长中';
             } else if (zt != "min" && zt != "max") {
                 document.getElementById('ww').innerHTML = '孵化中';
+            } else {
+                document.getElementById('ww').innerHTML = '已签到';
             }
             document.getElementById("qd").style.animationName = 'no';
         } else {
@@ -115,6 +123,59 @@ function qd() {
     } else {
         alert("还没有下蛋哦！")
     }
+}
+
+function mjd() {
+    lx = "egg"
+    jd = jdjg;
+    sl = egg;
+    document.getElementById("jg").innerHTML = jdjg;
+    document.getElementById("sl").innerHTML = egg;
+}
+
+function mcd() {
+    lx = "egg2"
+    jd = cdjg;
+    sl = egg2;
+    document.getElementById("jg").innerHTML = cdjg;
+    document.getElementById("sl").innerHTML = egg2;
+}
+
+function ydy() {
+    var txsl = document.getElementById("txsl").value;
+    document.getElementById("ydy").innerHTML = txsl * jg;
+}
+
+function zz() {
+    var a = document.getElementById("zh").value,
+        b = Number(document.getElementById("txsl").value),
+        j;
+    if (b <= sl && sl != 0) {
+        if (lx == "egg") {
+            query.get(a).then(res => {
+                console.log(res)
+                j = res.egg;
+                res.set('egg', j + b)
+                alert("成功！")
+            }).catch(err => {
+                alert("失败")
+            })
+            query.get(obj).then(res => {
+                console.log(res)
+                j = res.egg;
+                res.set('egg', egg - b)
+                res.save()
+                document.getElementById("sl").innerHTML = egg - b;
+                document.getElementById("ds").innerHTML = egg - b;
+                Bmob.User.updateStorage(obj)
+            }).catch(err => {
+                alert("失败")
+            })
+        }
+    } else {
+        alert("余额不足！")
+    }
+
 }
 
 function cur() {
@@ -138,7 +199,7 @@ function DateDiff(sDate1, sDate2) { //sDate1和sDate2是2006-12-18格式
 
 function sign2() {
     //判断用户已登录
-    if (obj != "") {
+    if (obj != undefined) {
         document.getElementById("reg").style.display = "none";
         document.getElementById("jmm").style.display = "block";
         document.getElementById("ds").innerHTML = egg;
@@ -166,11 +227,41 @@ function sign2() {
                 document.getElementById("jmm").style.backgroundImage = "url('./images/jmm2.png')";
             }
         }
-        if (zt == 'max') {
+        if (zt == 'max' && d != 0) {
             document.getElementById('ww').innerHTML = '收取';
+        }
+        if (qqh != undefined) {
+            document.getElementById("bd").style.display = "none";
+            document.getElementById("jybox").style.display = "block";
+            document.getElementById("zzm").innerHTML = obj;
+            mjd()
         }
     }
 
+}
+
+function bd() {
+    var a = document.getElementById("qqh").value;
+    var b = document.getElementById("sjh").value;
+    if (a != "" && b != "") {
+        query.get(obj).then(res => {
+            console.log(res)
+            res.set('qqh', a)
+            res.set('phone', b)
+            res.save()
+            Bmob.User.updateStorage(obj) //更新数据
+            alert('提交成功')
+            document.getElementById("bd").style.display = "none";
+        }).catch(err => {
+            alert('网络错误,请刷新重试！')
+        });
+        document.getElementById("bd").style.display = "none";
+        document.getElementById("jybox").style.display = "block";
+        document.getElementById("zzm").innerHTML = obj;
+        mjd()
+    } else {
+        alert("不能有空哦")
+    }
 }
 window.onload = function() {
     sign2()

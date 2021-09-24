@@ -986,6 +986,94 @@ div[class*="js"] .t1 ul .b {
     background-color: rgba(255, 145, 0, 0);
 }
 
+.x1 .a .bd input {
+    width: 100px;
+    color: #ffbf00;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.x1 .a .bd button {
+    width: 50px;
+    margin-top: 3px;
+    color: #ffbf00;
+    border-radius: 10px;
+    border: solid 1px #ffbf00;
+    background-color: rgba(255, 145, 0, 0);
+}
+
+.x1 .a .box {
+    position: relative;
+    display: none;
+}
+
+.x1 .a .box .zzm {
+    color: #ffbf00;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 40px;
+    top: -28px;
+}
+
+.x1 .a .box .jdcd {
+    width: 80px;
+    height: 35px;
+    margin: 0px auto;
+}
+
+.x1 .a .box .jdcd .jd {
+    float: left;
+    width: 25px;
+    height: 35px;
+    background-image: url(images/d.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.x1 .a .box .jdcd .cd {
+    float: right;
+    width: 25px;
+    height: 35px;
+    background-image: url(images/cd4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.x1 .a .box .jgsl {
+    width: 110px;
+    height: 15px;
+    margin: 0px auto;
+}
+
+.x1 .a .box .jgsl .jg {
+    float: left;
+}
+
+.x1 .a .box .jgsl .sl {
+    float: right;
+}
+
+.x1 .a .box input {
+    width: 82px;
+    color: #ffbf00;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.x1 .a .box .txsl {
+    width: 25px;
+    color: #ffbf00;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.x1 .a .box button {
+    width: 40px;
+    margin-top: 3px;
+    font-size: 12px;
+    color: #ffbf00;
+    border-radius: 10px;
+    border: solid 1px #ffbf00;
+    background-color: rgba(255, 145, 0, 0);
+}
+
 .xm1 .j {
     width: 108px;
     height: 182px;
