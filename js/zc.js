@@ -150,31 +150,36 @@ function zz() {
     var a = document.getElementById("zh").value,
         b = Number(document.getElementById("txsl").value),
         j;
-    if (b <= sl && sl != 0) {
-        if (lx == "egg") {
-            query.get(a).then(res => {
-                console.log(res)
-                j = res.egg;
-                res.set('egg', j + b)
-                alert("成功！")
-            }).catch(err => {
-                alert("失败")
-            })
-            query.get(obj).then(res => {
-                console.log(res)
-                j = res.egg;
-                res.set('egg', egg - b)
-                res.save()
-                document.getElementById("sl").innerHTML = egg - b;
-                document.getElementById("ds").innerHTML = egg - b;
-                Bmob.User.updateStorage(obj)
-            }).catch(err => {
-                alert("失败")
-            })
+    if (a != "" && b != "") {
+        if (b <= sl && sl != 0) {
+            if (lx == "egg") {
+                query.get(a).then(res => {
+                    console.log(res)
+                    j = res.egg;
+                    res.set('egg', j + b)
+                    alert("成功！")
+                }).catch(err => {
+                    alert("失败")
+                })
+                query.get(obj).then(res => {
+                    console.log(res)
+                    j = res.egg;
+                    res.set('egg', egg - b)
+                    res.save()
+                    document.getElementById("sl").innerHTML = egg - b;
+                    document.getElementById("ds").innerHTML = egg - b;
+                    Bmob.User.updateStorage(obj)
+                }).catch(err => {
+                    alert("失败")
+                })
+            }
+        } else {
+            alert("余额不足！")
         }
     } else {
-        alert("余额不足！")
+        alert("不能有空哦")
     }
+
 
 }
 
