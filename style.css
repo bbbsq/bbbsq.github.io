@@ -915,12 +915,11 @@ div[class*="js"] .t1 ul .b {
     height: 22px;
     /* animation-name: qq; */
     animation-duration: 2s;
-    z-index: -1;
+    color: rgba(255, 255, 255, 0);
 }
 
 @keyframes qq {
     0% {
-        color: #FFF;
         top: 5px;
     }
     30% {
