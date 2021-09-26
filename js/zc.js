@@ -19,8 +19,8 @@ var ts = DateDiff(csj, cur()),
 var time = new Date().getHours(); //获取时间
 var i = 0, //点击签到次数
     d = 0, //可领蛋个数
-    jdjg = 0, //鸡蛋价格
-    cdjg = 0, //彩蛋价格
+    jdjg = 0.5, //鸡蛋价格
+    cdjg = 1.5, //彩蛋价格
     lx = '', //判断蛋的类型
     jg = 0, //赋值价格
     sl = 0; //赋值彩数量
@@ -117,17 +117,19 @@ function qd() {
                 document.getElementById('ww').innerHTML = '已签到';
             }
             document.getElementById("qd").style.animationName = 'no';
+            document.getElementById("q").style.animationName = 'qq';
         } else {
             alert("还没有下蛋哦！")
         }
     } else {
         alert("还没有下蛋哦！")
     }
+
 }
 
 function mjd() {
     lx = "egg"
-    jd = jdjg;
+    jg = jdjg;
     sl = egg;
     document.getElementById("jg").innerHTML = jdjg;
     document.getElementById("sl").innerHTML = egg;
@@ -135,7 +137,7 @@ function mjd() {
 
 function mcd() {
     lx = "egg2"
-    jd = cdjg;
+    jg = cdjg;
     sl = egg2;
     document.getElementById("jg").innerHTML = cdjg;
     document.getElementById("sl").innerHTML = egg2;
@@ -146,42 +148,6 @@ function ydy() {
     document.getElementById("ydy").innerHTML = txsl * jg;
 }
 
-function zz() {
-    var a = document.getElementById("zh").value,
-        b = Number(document.getElementById("txsl").value),
-        j;
-    if (a != "" && b != "") {
-        if (b <= sl && sl != 0) {
-            if (lx == "egg") {
-                query.get(a).then(res => {
-                    console.log(res)
-                    j = res.egg;
-                    res.set('egg', j + b)
-                    alert("成功！")
-                }).catch(err => {
-                    alert("失败")
-                })
-                query.get(obj).then(res => {
-                    console.log(res)
-                    j = res.egg;
-                    res.set('egg', egg - b)
-                    res.save()
-                    document.getElementById("sl").innerHTML = egg - b;
-                    document.getElementById("ds").innerHTML = egg - b;
-                    Bmob.User.updateStorage(obj)
-                }).catch(err => {
-                    alert("失败")
-                })
-            }
-        } else {
-            alert("余额不足！")
-        }
-    } else {
-        alert("不能有空哦")
-    }
-
-
-}
 
 function cur() {
     var d = new Date(),
@@ -238,7 +204,6 @@ function sign2() {
         if (qqh != undefined) {
             document.getElementById("bd").style.display = "none";
             document.getElementById("jybox").style.display = "block";
-            document.getElementById("zzm").innerHTML = obj;
             mjd()
         }
     }
