@@ -926,7 +926,9 @@ div[class*="js"] .t1 ul .b {
         z-index: 1;
     }
     50% {
-        color: #FFF;
+        color: #00ac98;
+        border-radius: 20px;
+        background-color: #b4ffd6;
         top: -50px;
         z-index: 1;
     }
