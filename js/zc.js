@@ -1,6 +1,16 @@
 Bmob.initialize("3c1d9bdb4698443b", "10086", "12af5658d30f0016a69d61e1468f4c69");
 Bmob.debug(true)
 const query = Bmob.Query('_User'); //获取表
+query.get('I4iJg88g').then(res => {
+    var zegg = res.egg,
+        jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
+        xsjg = (jgts / zegg).toFixed(2);
+
+    document.getElementById("jgxs").innerHTML = xsjg + '&#xA5';
+}).catch(err => {
+    alert("价格信息获取失败，请刷新！")
+})
+
 
 let user = Bmob.User.current() //获取缓存
 var obj = user.objectId,
@@ -19,11 +29,8 @@ var ts = DateDiff(csj, cur()),
 var time = new Date().getHours(); //获取时间
 var i = 0, //点击签到次数
     d = 0, //可领蛋个数
-    jdjg = 0.5, //鸡蛋价格
-    cdjg = 1.5, //彩蛋价格
-    lx = '', //判断蛋的类型
-    jg = 0, //赋值价格
-    sl = 0; //赋值彩数量
+    txsl = 0;
+
 function xx() {
     if (ts2 > 1) { //判断连续签到
         query.get(obj).then(res => {
@@ -88,6 +95,11 @@ function qd() {
                     document.getElementById('ww').innerHTML = '已收取';
                     i++;
                 });
+                query.get('I4iJg88g').then(res => {
+                    var zegg = res.egg;
+                    res.set('egg', zegg + 1)
+                    res.save()
+                })
             } else if (d == 2) {
                 query.get(obj).then(res => {
                     console.log(res)
@@ -98,8 +110,15 @@ function qd() {
                     setTimeout("document.getElementById('ds').innerHTML = egg + 1;", "2000");
                     setTimeout("document.getElementById('ds').innerHTML = egg + 2;", "4000");
                     document.getElementById('ww').innerHTML = '已收取';
+
+                    query.get('I4iJg88g').then(res => {
+                        var zegg = res.egg;
+                        res.set('egg', zegg + 2)
+                        res.save()
+                    })
                     i++;
                 });
+
             }
             query.get(obj).then(res => { //设置今天签到日期
                 console.log(res)
@@ -128,26 +147,71 @@ function qd() {
 }
 
 function mjd() {
-    lx = "egg"
-    jg = jdjg;
-    sl = egg;
-    document.getElementById("jg").innerHTML = jdjg;
-    document.getElementById("sl").innerHTML = egg;
+    query.get('I4iJg88g').then(res => {
+        var zegg = res.egg,
+            jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
+            jg = (jgts / zegg).toFixed(3);
+        document.getElementById("jg").innerHTML = jg;
+        document.getElementById("sl").innerHTML = egg;
+    }).catch(err => {
+        alert("价格信息获取失败，请刷新！")
+    })
 }
 
 function mcd() {
-    lx = "egg2"
-    jg = cdjg;
-    sl = egg2;
-    document.getElementById("jg").innerHTML = cdjg;
-    document.getElementById("sl").innerHTML = egg2;
+    alert("敬请期待！")
 }
 
 function ydy() {
-    var txsl = document.getElementById("txsl").value;
-    document.getElementById("ydy").innerHTML = txsl * jg;
+    txsl = document.getElementById("txsl").value
+    query.get('I4iJg88g').then(res => {
+        var zegg = res.egg,
+            jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
+            jdjg = (jgts / zegg).toFixed(3),
+            txje = (txsl * jdjg).toFixed(2);
+        document.getElementById("ydy").innerHTML = txje;
+    })
 }
 
+function mc() {
+    if (txsl <= egg) {
+        if (txsl >= 20) {
+            // const query = Bmob.Query('User2');
+            // query.get('I4iJg88g').then(res => {
+            //     var zegg = res.egg,
+            //         jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
+            //         xsjg = (jgts / zegg).toFixed(2);
+            // }).catch(err => {
+            //     alert("价格信息获取失败，请刷新！")
+            // })
+
+
+            // query.set("sj", csj)
+            // query.set("egg", txsl)
+            // query.set("jg", jg)
+            // query.set("sjh", sjh)
+            // query.save().then(res => {
+            //     console.log(res)
+            // }).catch(err => {
+            //     alert("提现失败")
+            // })
+            query.get(obj).then(res => {
+                console.log(res)
+                res.set('egg', egg - txsl)
+                res.save()
+                alert('成功，待审核！\n' +
+                    "账号:" + sjh + "\n数量:" + txsl)
+            }).catch(err => {
+                alert('提现失败!')
+            });
+            document.getElementById('ds').innerHTML = egg - txsl;
+        } else {
+            alert('最低20枚鸡蛋哦')
+        }
+    } else {
+        alert("提现失败！")
+    }
+}
 
 function cur() {
     var d = new Date(),

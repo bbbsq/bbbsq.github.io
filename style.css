@@ -1056,13 +1056,13 @@ div[class*="js"] .t1 ul .b {
     float: right;
     width: 25px;
     height: 35px;
-    background-image: url(images/cd6.png);
+    background-image: url(images/cd.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 105%;
 }
 
 .x1 .a .box .jgsl {
-    width: 100px;
+    width: 80%;
     height: 15px;
     margin: 8px auto;
 }
@@ -1146,6 +1146,19 @@ div[class*="js"] .t1 ul .b {
     transform: rotateZ(0);
 }
 
+.xm1 .j .cd {
+    position: absolute;
+    width: 16px;
+    height: 22px;
+    left: 195%;
+    margin-left: -19px;
+    bottom: 115px;
+    transform: rotateZ(0);
+    background-image: url(images/cd.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 @keyframes d1 {
     0% {
         bottom: 8px;
@@ -1202,22 +1215,16 @@ div[class*="js"] .t1 ul .b {
 
 .xm1 .j .ddr {
     position: absolute;
-    top: 38px;
-    left: 174%;
-    color: rgb(255, 230, 0);
+    bottom: 0px;
+    left: 150%;
+    width: 55px;
+    color: rgb(255, 255, 255);
     font-size: 12px;
     text-align: center;
-    line-height: 25px;
-    width: 23px;
-    height: 33px;
-    background-image: url(images/ddr.png);
-    background-size: 110%;
-    background-repeat: no-repeat;
 }
 
 .xm1 .j .ddr span {
     color: #fff;
-    line-height: 30px;
 }
 
 .xm1 .j .w {
