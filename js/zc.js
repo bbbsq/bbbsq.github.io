@@ -155,6 +155,7 @@ function tz() {
     document.getElementById("jmm").style.display = "none";
     document.getElementById("gskl").style.display = "block";
     document.getElementById("yw").style.display = "none";
+    document.getElementById("reg").style.display = "none";
 }
 
 function mjd() {
