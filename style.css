@@ -897,6 +897,100 @@ div[class*="js"] .t1 ul .b {
     color: #ffbf00;
 }
 
+.xm1 .gskl {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.xm1 .gskl h3 {
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    text-align: center;
+}
+
+.xm1 .gskl p {
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 12px;
+    text-align: center;
+}
+
+.xm1 .gskl .tx li {
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.xm1 .gskl .tx li {
+    background-image: url(images/cs1.png);
+    display: block;
+}
+
+.xm1 .gskl ul li div {
+    width: 60px;
+    height: 60px;
+    margin-left: -12.5px;
+    overflow: hidden;
+    color: rgb(43, 255, 0);
+    text-shadow: 2px 2px 5px #000;
+    font-size: 12px;
+    line-height: 85px;
+    text-align: center;
+}
+
+.xm1 .gskl .cscd {
+    width: 100%;
+    height: 30px;
+    margin-top: 65px;
+}
+
+.xm1 .gskl .cscd ul li {
+    width: 23px;
+    height: 30px;
+    float: left;
+    margin-left: 4px;
+    background-image: url(images/cd.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation-name: cscdfd;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cscdfd {
+    0% {
+        margin-top: 5px;
+    }
+    50% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: 5px;
+    }
+}
+
+.xm1 .csxz {
+    width: 60px;
+    height: 20px;
+    margin: 20px auto;
+    color: #00ac98;
+    font-size: 14px;
+    text-align: center;
+    background-color: #b4ffd6;
+    border-radius: 10px;
+    border: solid 1px #00ac98;
+}
+
 .xm1 .x1 .z {
     float: left;
     font-size: 15px;
@@ -905,38 +999,6 @@ div[class*="js"] .t1 ul .b {
     animation-duration: 0.3s;
     /* animation-name: dd; */
     animation-iteration-count: infinite;
-}
-
-.xm1 .x1 .z .q {
-    position: absolute;
-    top: 5px;
-    color: #FFF;
-    width: 70px;
-    height: 22px;
-    /* animation-name: qq; */
-    animation-duration: 2s;
-    color: rgba(255, 255, 255, 0);
-}
-
-@keyframes qq {
-    0% {
-        top: 5px;
-    }
-    30% {
-        z-index: 1;
-    }
-    50% {
-        color: #00ac98;
-        border-radius: 20px;
-        background-color: #b4ffd6;
-        top: -50px;
-        z-index: 1;
-    }
-    100% {
-        top: -50px;
-        color: rgba(255, 255, 255, 0);
-        z-index: 1;
-    }
 }
 
 @keyframes dd {

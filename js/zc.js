@@ -1,8 +1,9 @@
 Bmob.initialize("3c1d9bdb4698443b", "10086", "12af5658d30f0016a69d61e1468f4c69");
 Bmob.debug(true)
+var zegg, jgts, xsjg = 8;
 const query = Bmob.Query('_User'); //获取表
 query.get('I4iJg88g').then(res => {
-    var zegg = res.egg,
+    zegg = res.egg,
         jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
         xsjg = (jgts / zegg).toFixed(2);
 
@@ -99,6 +100,7 @@ function qd() {
                     var zegg = res.egg;
                     res.set('egg', zegg + 1)
                     res.save()
+                    Bmob.User.updateStorage(obj)
                 })
             } else if (d == 2) {
                 query.get(obj).then(res => {
@@ -115,6 +117,7 @@ function qd() {
                         var zegg = res.egg;
                         res.set('egg', zegg + 2)
                         res.save()
+                        Bmob.User.updateStorage(obj)
                     })
                     i++;
                 });
@@ -136,7 +139,6 @@ function qd() {
                 document.getElementById('ww').innerHTML = '已签到';
             }
             document.getElementById("qd").style.animationName = 'no';
-            document.getElementById("q").style.animationName = 'qq';
         } else {
             alert("还没有下蛋哦！")
         }
@@ -144,13 +146,22 @@ function qd() {
         alert("还没有下蛋哦！")
     }
 
+    document.getElementById("jgxs").innerHTML = xsjg + '&#xA5';
+
+
+}
+
+function tz() {
+    document.getElementById("jmm").style.display = "none";
+    document.getElementById("gskl").style.display = "block";
+    document.getElementById("yw").style.display = "none";
 }
 
 function mjd() {
     query.get('I4iJg88g').then(res => {
         var zegg = res.egg,
             jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
-            jg = (jgts / zegg).toFixed(3);
+            jg = (jgts / zegg).toFixed(2);
         document.getElementById("jg").innerHTML = jg;
         document.getElementById("sl").innerHTML = egg;
     }).catch(err => {
@@ -176,6 +187,24 @@ function ydy() {
 function mc() {
     if (txsl <= egg) {
         if (txsl >= 20) {
+            // query.get('I4iJg88g').then(res => {
+            //     var zegg = res.egg,
+            //         jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
+            //         jdjg = (jgts / zegg).toFixed(3),
+            //         txje = (txsl * jdjg).toFixed(2);
+            //     document.getElementById("ydy").innerHTML = txje;
+            // })
+            // query.get(obj).then(res => {
+            //     console.log(res)
+            //     res.set("sj", csj)
+            //     res.set("egg", txsl)
+            //     res.set("jg", jg)
+            //     res.set("sjh", sjh)
+            //     res.save()
+            // }).catch(err => {
+            //     alert('网络错误,请刷新重试！')
+            // });
+
             // const query = Bmob.Query('User2');
             // query.get('I4iJg88g').then(res => {
             //     var zegg = res.egg,
@@ -186,15 +215,9 @@ function mc() {
             // })
 
 
-            // query.set("sj", csj)
-            // query.set("egg", txsl)
-            // query.set("jg", jg)
-            // query.set("sjh", sjh)
-            // query.save().then(res => {
-            //     console.log(res)
-            // }).catch(err => {
-            //     alert("提现失败")
-            // })
+
+
+
             query.get(obj).then(res => {
                 console.log(res)
                 res.set('egg', egg - txsl)
@@ -298,6 +321,10 @@ function bd() {
     }
 }
 window.onload = function() {
+    var windowWidth = document.body.clientWidth;
+    if (windowWidth > 1000) {
+        alert('抱歉，我们只适配了手机')
+    }
     sign2()
     if (ts2 == 0) {
         if (zt == "max") {
