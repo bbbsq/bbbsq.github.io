@@ -1,8 +1,8 @@
 Bmob.initialize("3c1d9bdb4698443b", "10086", "12af5658d30f0016a69d61e1468f4c69");
 Bmob.debug(true)
-var zegg, jgts, xsjg = 8;
 const query = Bmob.Query('_User'); //获取表
 query.get('I4iJg88g').then(res => {
+    var zegg, jgts, xsjg;
     zegg = res.egg,
         jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
         xsjg = (jgts / zegg).toFixed(2);
@@ -60,8 +60,8 @@ function xx() {
         Bmob.User.updateStorage(obj) //更新缓存
     }
 
-    if (lxts <= 10 && zt == 'max') { //判断连续<10天数后
-        if (ts % 2 == 0) {
+    if (lxts < 10 && zt == 'max') { //判断连续<10天数后
+        if (ts % 2 == 1) {
             d = 1;
         }
     } else if (lxts >= 10 && lxts <= 29 && zt == 'max') { //判断连续10到30的天数
@@ -73,6 +73,8 @@ function xx() {
 xx();
 
 function qd() {
+    document.getElementById("jmm").style.display = "block";
+    document.getElementById("gskl").style.display = "none";
     if (i == 0) { //判断是否已经签到
         if (ts2 != 0) { //判断当天是否第一次签到
             if (ts2 == 1) { //判断是否连续签到
@@ -128,7 +130,6 @@ function qd() {
                 res.set('sj', cur())
                 res.save()
             });
-            Bmob.User.updateStorage(obj) //更新数据
             if (zt == "max" && d != 0) {
                 document.getElementById('ww').innerHTML = '已收取';
             } else if (zt == "min") {
@@ -145,10 +146,7 @@ function qd() {
     } else {
         alert("还没有下蛋哦！")
     }
-
-    document.getElementById("jgxs").innerHTML = xsjg + '&#xA5';
-
-
+    Bmob.User.updateStorage(obj) //更新数据
 }
 
 function tz() {
