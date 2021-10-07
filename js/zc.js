@@ -342,6 +342,7 @@ window.onload = function() {
     var gmn = "2021-8-13"
     var yb = "2021-8-9"
     var bg = "2021-9-17"
+    var ljwl = "2021-9-10"
     s = cur(); // 获取当前时间
     document.getElementById("zbc").innerHTML = DateDiff(zbc, s); //计算天数差的函数
     document.getElementById("bee").innerHTML = DateDiff(bee, s);
@@ -351,6 +352,7 @@ window.onload = function() {
     document.getElementById("gmn").innerHTML = DateDiff(gmn, s);
     document.getElementById("yb").innerHTML = DateDiff(yb, s);
     document.getElementById("bg").innerHTML = DateDiff(bg, s);
+    document.getElementById("ljwl").innerHTML = DateDiff(ljwl, s);
 }
 
 function register() {

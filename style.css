@@ -52,14 +52,17 @@ li {
 }
 
 .header .box .xm-a {
-    background-image: url(images/cclogo.png);
+    background-image: url(images/ljwllogo.png);
+    background-position: top;
+    background-size: 90%;
     background-repeat: no-repeat;
 }
 
-.header .box .xm-b {
+
+/* .header .box .xm-b {
     background-image: url(images/starlogo.jpg);
     background-repeat: no-repeat;
-}
+} */
 
 .header h2 {
     margin-top: 10px;
@@ -1380,6 +1383,10 @@ div[class*="js"] .t1 ul .b {
 
 .wrap .front .tt-yb {
     background-image: url(jc/images/yb.jpg);
+}
+
+.wrap .front .tt-ljwl {
+    background-image: url(jc/images/ljwl.jpg);
 }
 
 .wrap .front div[class*="tt"] ul {
