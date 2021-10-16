@@ -34,7 +34,7 @@ li {
     position: absolute;
     top: 50px;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -50px;
 }
 
 .header div[class*=xm] {
@@ -58,11 +58,10 @@ li {
     background-repeat: no-repeat;
 }
 
-
-/* .header .box .xm-b {
-    background-image: url(images/starlogo.jpg);
+.header .box .xm-b {
+    background-image: url(images/bhdex.png);
     background-repeat: no-repeat;
-} */
+}
 
 .header h2 {
     margin-top: 10px;

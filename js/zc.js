@@ -184,6 +184,7 @@ function ydy() {
 }
 
 function mc() {
+    var txsl = document.getElementById("txsl").value
     if (txsl <= egg) {
         if (txsl >= 20) {
             // query.get('I4iJg88g').then(res => {
@@ -216,13 +217,22 @@ function mc() {
 
 
 
-
+            var txsl = document.getElementById("txsl").value
             query.get(obj).then(res => {
                 console.log(res)
                 res.set('egg', egg - txsl)
                 res.save()
-                alert('成功，待审核！\n' +
-                    "账号:" + sjh + "\n数量:" + txsl)
+
+                query.get('I4iJg88g').then(res => {
+                    var zegg = res.egg,
+                        jgts = DateDiff(res.createdAt.substr(0, 10), cur()),
+                        jdjg = (jgts / zegg).toFixed(3),
+                        txje = (txsl * jdjg).toFixed(2),
+                        je = txje;
+                    alert('开发繁忙，先截屏给群主！\n' +
+                        "账号:" + sjh + "\n数量:" + txsl + ',' + "金额：" + je)
+                })
+
             }).catch(err => {
                 alert('提现失败!')
             });
@@ -231,7 +241,7 @@ function mc() {
             alert('最低20枚鸡蛋哦')
         }
     } else {
-        alert("提现失败！")
+        alert("余额不足！")
     }
 }
 
