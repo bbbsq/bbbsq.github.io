@@ -344,15 +344,16 @@ window.onload = function() {
             document.getElementById('ww').innerHTML = '孵化中';
         }
     }
-    var zbc = "2020-12-12"
-    var bee = "2020-12-11"
-    var bhdex = "2021-5-7"
-    var vgc = "2021-6-17"
-    var bi = "2021-6-24"
-    var gmn = "2021-8-13"
-    var yb = "2021-8-9"
-    var bg = "2021-9-17"
-    var ljwl = "2021-9-10"
+    var zbc = "2020-12-12",
+        bee = "2020-12-11",
+        bhdex = "2021-5-7",
+        vgc = "2021-6-17",
+        bi = "2021-6-24",
+        gmn = "2021-8-13",
+        yb = "2021-8-9",
+        bg = "2021-9-17",
+        ljwl = "2021-9-10",
+        ecps = "2021-11-2"
     s = cur(); // 获取当前时间
     document.getElementById("zbc").innerHTML = DateDiff(zbc, s); //计算天数差的函数
     document.getElementById("bee").innerHTML = DateDiff(bee, s);
@@ -363,6 +364,7 @@ window.onload = function() {
     document.getElementById("yb").innerHTML = DateDiff(yb, s);
     document.getElementById("bg").innerHTML = DateDiff(bg, s);
     document.getElementById("ljwl").innerHTML = DateDiff(ljwl, s);
+    document.getElementById("ecps").innerHTML = DateDiff(ecps, s);
 }
 
 function register() {
