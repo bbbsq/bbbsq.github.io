@@ -26,7 +26,7 @@ li {
     background-size: 100% 100%;
     width: 100%;
     height: 200px;
-    background-image: url(images/xxmbj.gif);
+    background-image: url(images/ssmbj.jpg);
     background-repeat: no-repeat;
 }
 
@@ -34,7 +34,7 @@ li {
     position: absolute;
     top: 50px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -25px;
 }
 
 .header div[class*=xm] {
@@ -52,16 +52,17 @@ li {
 }
 
 .header .box .xm-a {
-    background-image: url(images/ecpslogo.png);
+    background-image: url(images/cheatmoonlogo.png);
     background-position: top;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-.header .box .xm-b {
+
+/* .header .box .xm-b {
     background-image: url(images/bhdex.png);
     background-repeat: no-repeat;
-}
+} */
 
 .header h2 {
     margin-top: 10px;
@@ -1390,6 +1391,10 @@ div[class*="js"] .t1 ul .b {
 
 .wrap .front .tt-ecps {
     background-image: url(jc/images/ecps.jpg);
+}
+
+.wrap .front .tt-cheatmoon {
+    background-image: url(jc/images/cheatmoon.PNG);
 }
 
 .wrap .front div[class*="tt"] ul {

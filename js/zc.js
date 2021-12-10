@@ -353,7 +353,8 @@ window.onload = function() {
         yb = "2021-8-9",
         bg = "2021-9-17",
         ljwl = "2021-9-10",
-        ecps = "2021-11-2"
+        ecps = "2021-11-2",
+        cheatmoon = "2021-12-9"
     s = cur(); // 获取当前时间
     document.getElementById("zbc").innerHTML = DateDiff(zbc, s); //计算天数差的函数
     document.getElementById("bee").innerHTML = DateDiff(bee, s);
@@ -365,6 +366,7 @@ window.onload = function() {
     document.getElementById("bg").innerHTML = DateDiff(bg, s);
     document.getElementById("ljwl").innerHTML = DateDiff(ljwl, s);
     document.getElementById("ecps").innerHTML = DateDiff(ecps, s);
+    document.getElementById("cheatmoon").innerHTML = DateDiff(cheatmoon, s);
 }
 
 function register() {
