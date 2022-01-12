@@ -32,121 +32,122 @@ var i = 0, //点击签到次数
     d = 0, //可领蛋个数
     txsl = 0;
 
-function xx() {
-    if (ts2 > 1) { //判断连续签到
-        query.get(obj).then(res => {
-            console.log(res)
-            res.set('lxts', 0)
-            res.save()
-        });
-        lxts = 0;
-    }
-    if (zt != 'max') { //判断小鸡是否成年
-        if (lxts >= 2 && lxts < 9) {
-            query.get(obj).then(res => {
-                console.log(res)
-                res.set('zt', 'min')
-                res.save()
-                document.getElementById("jmm").backgroundImage = "url('./images/xjj.gif')";
-            });
-        } else if (lxts >= 9) {
-            query.get(obj).then(res => {
-                console.log(res)
-                res.set('zt', 'max')
-                res.save()
-                document.getElementById("jmm").backgroundImage = "url('./images/jmm.png')";
-            });
-        }
-        Bmob.User.updateStorage(obj) //更新缓存
-    }
+// function xx() {
+//     if (ts2 > 1) { //判断连续签到
+//         query.get(obj).then(res => {
+//             console.log(res)
+//             res.set('lxts', 0)
+//             res.save()
+//         });
+//         lxts = 0;
+//     }
+//     if (zt != 'max') { //判断小鸡是否成年
+//         if (lxts >= 2 && lxts < 9) {
+//             query.get(obj).then(res => {
+//                 console.log(res)
+//                 res.set('zt', 'min')
+//                 res.save()
+//                 document.getElementById("jmm").backgroundImage = "url('./images/xjj.gif')";
+//             });
+//         } else if (lxts >= 9) {
+//             query.get(obj).then(res => {
+//                 console.log(res)
+//                 res.set('zt', 'max')
+//                 res.save()
+//                 document.getElementById("jmm").backgroundImage = "url('./images/jmm.png')";
+//             });
+//         }
+//         Bmob.User.updateStorage(obj) //更新缓存
+//     }
 
-    if (lxts < 10 && zt == 'max') { //判断连续<10天数后
-        if (ts % 2 == 1) {
-            d = 1;
-        }
-    } else if (lxts >= 10 && lxts <= 29 && zt == 'max') { //判断连续10到30的天数
-        d = 1;
-    } else if (lxts >= 30 && zt == 'max') { //判断连续30以上的天数
-        d = 2;
-    }
-}
-xx();
+//     if (lxts < 10 && zt == 'max') { //判断连续<10天数后
+//         if (ts % 2 == 1) {
+//             d = 1;
+//         }
+//     } else if (lxts >= 10 && lxts <= 29 && zt == 'max') { //判断连续10到30的天数
+//         d = 1;
+//     } else if (lxts >= 30 && zt == 'max') { //判断连续30以上的天数
+//         d = 2;
+//     }
+// }
+// xx();
 
 function qd() {
-    document.getElementById("jmm").style.display = "block";
-    document.getElementById("gskl").style.display = "none";
-    if (i == 0) { //判断是否已经签到
-        if (ts2 != 0) { //判断当天是否第一次签到
-            if (ts2 == 1) { //判断是否连续签到
-                query.get(obj).then(res => {
-                    console.log(res)
-                    res.set('lxts', lxts + 1)
-                    res.save()
-                    document.getElementById('ddr').innerHTML = lxts + 1;
-                    i++;
-                }).catch(err => {
-                    alert('网络错误,请刷新重试！')
-                });
-            }
-            if (d == 1) {
-                query.get(obj).then(res => {
-                    console.log(res)
-                    res.set('egg', egg + 1)
-                    res.save()
-                    document.getElementById('d1').style.animationName = 'd1';
-                    setTimeout("document.getElementById('ds').innerHTML = egg + 1;", "2000");
-                    document.getElementById('ww').innerHTML = '已收取';
-                    i++;
-                });
-                query.get('I4iJg88g').then(res => {
-                    var zegg = res.egg;
-                    res.set('egg', zegg + 1)
-                    res.save()
-                    Bmob.User.updateStorage(obj)
-                })
-            } else if (d == 2) {
-                query.get(obj).then(res => {
-                    console.log(res)
-                    res.set('egg', egg + 2)
-                    res.save()
-                    document.getElementById('d1').style.animationName = 'd1';
-                    document.getElementById('d2').style.animationName = 'd2';
-                    setTimeout("document.getElementById('ds').innerHTML = egg + 1;", "2000");
-                    setTimeout("document.getElementById('ds').innerHTML = egg + 2;", "4000");
-                    document.getElementById('ww').innerHTML = '已收取';
+    // document.getElementById("jmm").style.display = "block";
+    // document.getElementById("gskl").style.display = "none";
+    // if (i == 0) { //判断是否已经签到
+    //     if (ts2 != 0) { //判断当天是否第一次签到
+    //         if (ts2 == 1) { //判断是否连续签到
+    //             query.get(obj).then(res => {
+    //                 console.log(res)
+    //                 res.set('lxts', lxts + 1)
+    //                 res.save()
+    //                 document.getElementById('ddr').innerHTML = lxts + 1;
+    //                 i++;
+    //             }).catch(err => {
+    //                 alert('网络错误,请刷新重试！')
+    //             });
+    //         }
+    //         if (d == 1) {
+    //             query.get(obj).then(res => {
+    //                 console.log(res)
+    //                 res.set('egg', egg + 1)
+    //                 res.save()
+    //                 document.getElementById('d1').style.animationName = 'd1';
+    //                 setTimeout("document.getElementById('ds').innerHTML = egg + 1;", "2000");
+    //                 document.getElementById('ww').innerHTML = '已收取';
+    //                 i++;
+    //             });
+    //             query.get('I4iJg88g').then(res => {
+    //                 var zegg = res.egg;
+    //                 res.set('egg', zegg + 1)
+    //                 res.save()
+    //                 Bmob.User.updateStorage(obj)
+    //             })
+    //         } else if (d == 2) {
+    //             query.get(obj).then(res => {
+    //                 console.log(res)
+    //                 res.set('egg', egg + 2)
+    //                 res.save()
+    //                 document.getElementById('d1').style.animationName = 'd1';
+    //                 document.getElementById('d2').style.animationName = 'd2';
+    //                 setTimeout("document.getElementById('ds').innerHTML = egg + 1;", "2000");
+    //                 setTimeout("document.getElementById('ds').innerHTML = egg + 2;", "4000");
+    //                 document.getElementById('ww').innerHTML = '已收取';
 
-                    query.get('I4iJg88g').then(res => {
-                        var zegg = res.egg;
-                        res.set('egg', zegg + 2)
-                        res.save()
-                        Bmob.User.updateStorage(obj)
-                    })
-                    i++;
-                });
+    //                 query.get('I4iJg88g').then(res => {
+    //                     var zegg = res.egg;
+    //                     res.set('egg', zegg + 2)
+    //                     res.save()
+    //                     Bmob.User.updateStorage(obj)
+    //                 })
+    //                 i++;
+    //             });
 
-            }
-            query.get(obj).then(res => { //设置今天签到日期
-                console.log(res)
-                res.set('sj', cur())
-                res.save()
-            });
-            if (zt == "max" && d != 0) {
-                document.getElementById('ww').innerHTML = '已收取';
-            } else if (zt == "min") {
-                document.getElementById('ww').innerHTML = '成长中';
-            } else if (zt != "min" && zt != "max") {
-                document.getElementById('ww').innerHTML = '孵化中';
-            } else {
-                document.getElementById('ww').innerHTML = '已签到';
-            }
-            document.getElementById("qd").style.animationName = 'no';
-        } else {
-            alert("还没有下蛋哦！")
-        }
-    } else {
-        alert("还没有下蛋哦！")
-    }
-    Bmob.User.updateStorage(obj) //更新数据
+    //         }
+    //         query.get(obj).then(res => { //设置今天签到日期
+    //             console.log(res)
+    //             res.set('sj', cur())
+    //             res.save()
+    //         });
+    //         if (zt == "max" && d != 0) {
+    //             document.getElementById('ww').innerHTML = '已收取';
+    //         } else if (zt == "min") {
+    //             document.getElementById('ww').innerHTML = '成长中';
+    //         } else if (zt != "min" && zt != "max") {
+    //             document.getElementById('ww').innerHTML = '孵化中';
+    //         } else {
+    //             document.getElementById('ww').innerHTML = '已签到';
+    //         }
+    //         document.getElementById("qd").style.animationName = 'no';
+    //     } else {
+    //         alert("还没有下蛋哦！")
+    //     }
+    // } else {
+    //     alert("还没有下蛋哦！")
+    // }
+    // Bmob.User.updateStorage(obj) //更新数据
+    alert("暂时停产中，请等待社区收益共享，感谢支持！")
 }
 
 function tz() {
@@ -279,7 +280,8 @@ function sign2() {
                 document.getElementById("d1").style.display = "block";
                 document.getElementById("d2").style.display = "block";
             }
-            document.getElementById("qd").style.animationName = 'dd';
+            //按钮提示签到跳动
+            // document.getElementById("qd").style.animationName = 'dd';
         }
         //判断鸡的大小
         if (zt == 'min') {
@@ -335,15 +337,15 @@ window.onload = function() {
         alert('抱歉，我们只适配了手机')
     }
     sign2()
-    if (ts2 == 0) {
-        if (zt == "max") {
-            document.getElementById('ww').innerHTML = '已收取';
-        } else if (zt == "min") {
-            document.getElementById('ww').innerHTML = '成长中';
-        } else if (zt != "min" && zt != "max") {
-            document.getElementById('ww').innerHTML = '孵化中';
-        }
-    }
+        // if (ts2 == 0) {
+        //     if (zt == "max") {
+        //         document.getElementById('ww').innerHTML = '已收取';
+        //     } else if (zt == "min") {
+        //         document.getElementById('ww').innerHTML = '成长中';
+        //     } else if (zt != "min" && zt != "max") {
+        //         document.getElementById('ww').innerHTML = '孵化中';
+        //     }
+        // }
     var zbc = "2020-12-12",
         bee = "2020-12-11",
         bhdex = "2021-5-7",
