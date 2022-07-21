@@ -334,7 +334,7 @@ function bd() {
 window.onload = function() {
     var windowWidth = document.body.clientWidth;
     if (windowWidth > 1000) {
-        alert('抱歉，我们只适配了手机')
+        alert('抱歉，我们只适配了安卓手机')
     }
     sign2()
         // if (ts2 == 0) {
@@ -348,7 +348,6 @@ window.onload = function() {
         // }
     var zbc = "2020-12-12",
         bee = "2020-12-11",
-        bhdex = "2021-5-7",
         vgc = "2021-6-17",
         bi = "2021-6-24",
         gmn = "2021-8-13",
@@ -360,7 +359,6 @@ window.onload = function() {
     s = cur(); // 获取当前时间
     document.getElementById("zbc").innerHTML = DateDiff(zbc, s); //计算天数差的函数
     document.getElementById("bee").innerHTML = DateDiff(bee, s);
-    document.getElementById("bhdex").innerHTML = DateDiff(bhdex, s);
     document.getElementById("vgc").innerHTML = DateDiff(vgc, s);
     document.getElementById("bi").innerHTML = DateDiff(bi, s);
     document.getElementById("gmn").innerHTML = DateDiff(gmn, s);
