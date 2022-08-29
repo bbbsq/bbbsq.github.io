@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=" utf-8">
+    <title>Coer</title>
+    <script>
+        function FreshTime() {
+            var endtime = new Date("2022/12/12,12:12:12");
+            var nowtime = new Date();
+            var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+            var d = parseInt(lefttime / 3600 / 24);
+            var h = parseInt((lefttime / 3600) % 24);
+            var m = parseInt((lefttime / 60) % 60);
+            var s = parseInt(lefttime % 60);
+            document.getElementById("lt").innerHTML =
+                d + "天" + h + "小时" + m + "分" + s + "秒";
+            if (lefttime <= 0) {
+                document.getElementById("lt").innerHTML = "团购已结束";
+                clearInterval(sh);
+            }
+        }
+
+        window.onload = function() {
+            FreshTime();
+            var timer;
+            timer = setInterval(FreshTime, 1000);
+        }
+    </script>
+</head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        background-color: #111010;
+    }
+    
+    .time {
+        width: 500px;
+        align-content: center;
+        margin: auto;
+    }
+    
+    span {
+        font-size: 50px;
+        color: darkorange;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 60px;
+        color: darkorange;
+    }
+    
+    img {
+        width: 700px;
+        height: 700px;
+        margin-top: 200px;
+        margin-left: 50%;
+        position: absolute;
+        left: -350px;
+    }
+</style>
+
+<body>
+
+
+    <img src="images/coer.gif" alt="" style="width: 700px;">
+    <p>"COER空投结束倒计时"</p>
+    <p id="lt" style="font-size:50px ;"></p>
+
+</body>
+
+</html>
